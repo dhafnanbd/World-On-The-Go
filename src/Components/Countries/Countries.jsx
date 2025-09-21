@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { use } from 'react';
+import Country from '../Country/Country';
+import './Countries.css'
 
-const Countries = () => {
+const Countries = ({ countriesPromise }) => {
+
+    const countriesData = use(countriesPromise);
+    const countries = countriesData.countries;
+
     return (
-        <div>
-            <h2>This is comming from countries component</h2>
+        <div className='countriesContainer'>
+            {
+                countries.map(country =>
+                    <Country
+                        key={country.cca3.cca3}
+                        country={country}>
+                    </Country>)
+            }
         </div>
     );
 };

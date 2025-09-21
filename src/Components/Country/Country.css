@@ -1,0 +1,80 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+
+    padding: 10px;
+    border: 1px solid rgb(73, 73, 73);
+    border-radius: 10px;
+
+    box-shadow: 0 0 8px rgb(65, 65, 65);
+}
+
+.card-visited {
+    background-color: rgb(18, 32, 21);
+}
+
+.card h2, .card-visited h2 {
+    font-size: 16px;
+    font-weight: 300;
+    color: gray;
+}
+
+.card p, .card-visited p {
+    font-size: 18px;
+    font-weight: 400;
+    color:  rgb(201, 201, 201);
+}
+
+#country-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bottom div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btn-container button {
+    padding: 10px;
+    border: 1px solid rgb(119, 119, 119);
+    width: 100%;
+    color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.btn-container{
+    margin-top: auto;
+}
+
+.btn-container button:hover {
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
