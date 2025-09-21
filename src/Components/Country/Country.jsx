@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import './Country.css'
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries, handleFav }) => {
 
     const [visited, setvisited] = useState(false)
 
     const handleVisit = () => {
         setvisited(visited ? false : true)
+        handleVisitedCountries(country);
     }
 
+    const [favorite, setFavorite] = useState(false)
+
+    const handleFavorite = () => {
+        setFavorite(favorite ? false : true)
+        handleFav(country)
+    }
 
     return (
-        <div className={`card ${visited?'card-visited':''}`}>
+        <div className={`card ${visited && 'card-visited'}`}>
             <div className='top'>
                 <div className='topleft'>
                     <h2 className='country-title' id='country-title'>{country.name.common}</h2>
@@ -46,10 +53,12 @@ const Country = ({ country }) => {
                 <button onClick={handleVisit}>
                     {visited ? 'Visited' : 'Not Visited'}
                 </button>
-                <button>Favorite</button>
+                <button onClick={handleFavorite}>
+                    {favorite ? 'Favorite' : 'Not Favorite!'}
+                </button>
             </div>
         </div>
-    );
+);
 };
 
 export default Country;

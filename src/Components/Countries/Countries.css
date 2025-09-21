@@ -3,3 +3,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}

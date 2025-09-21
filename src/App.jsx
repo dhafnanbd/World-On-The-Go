@@ -8,7 +8,7 @@ const countriesPromise = fetch('https://openapi.programming-hero.com/api/all')
 function App() {
   return (
     <>
-      <h1>This is the beginning...</h1>
+    <h2>Around The World</h2>
       <Suspense fallback={<p>Countries Loading....</p>}>
         <Countries countriesPromise={countriesPromise}></Countries>
       </Suspense>
